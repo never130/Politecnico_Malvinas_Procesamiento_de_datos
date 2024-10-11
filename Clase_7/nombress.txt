@@ -1,0 +1,4 @@
+Nombre Edad
+Juan   25
+Ana    30
+Luis   22
