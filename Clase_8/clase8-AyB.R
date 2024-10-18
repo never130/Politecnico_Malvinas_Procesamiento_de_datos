@@ -168,25 +168,3 @@ y <- pisos$precio
 ridgeMod <- glmnet(x, y, alpha=0)
 # Graficar el modelo de Ridge
 plot(ridgeMod)
-
-
-## EJERCICIO C
-# Elegir un dataset y aplicar modelos de regresión lineal
-# El dataset viene por defecto en R. Se puede exportar mediante archivo CSV
-write.csv(mtcars, file = "mtcars.csv", row.names = FALSE)
-
-data(mtcars)
-mtcars$cyl <- as.factor(mtcars$cyl) # Convertir a factor
-regMod <- lm(mpg ~ ., data=mtcars)
-summary(regMod)
-
-
-## EJERCICIO D
-#  Crear modelos de regresión múltiple con distintas combinaciones de variables
-# Modelo 1: mpg ~ disp + hp
-regMod1 <- lm(mpg ~ disp + hp, data=mtcars)
-summary(regMod1)
-
-# Modelo 2: mpg ~ disp + hp + wt
-regMod2 <- lm(mpg ~ disp + hp + wt, data=mtcars)
-summary(regMod2)
